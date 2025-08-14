@@ -7,58 +7,74 @@
 
   <meta name="description" content="Leé la declaración y sumá tu firma en apoyo." />
   <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #ffffff;
-      color: #000000;
-      line-height: 1.6;
-      max-width: 680px;
-      padding: 40px 20px;
-      margin-left: auto;
-      margin-right: auto;
+    :root{
+      --text:#111111; --muted:#4b5563; --link:#0b57d0; --link-visited:#6b21a8; --bg:#ffffff;
     }
-    h1 {
-      font-size: clamp(36px, 6vw, 64px);
-      font-weight: bold;
-      margin-bottom: 0.5em;
+    html,body{ background:var(--bg); color:var(--text); }
+    body{
+      margin:0; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      line-height:1.75; font-size:18px;
+      max-width: 720px; padding:48px 20px; margin-left:auto; margin-right:auto;
     }
-    h2 {
-      font-size: 20px;
-      margin-top: 2em;
-    }
-    p.lead {
-      font-size: 18px;
-      color: #333333;
-    }
-    a {
-      color: #0000EE;
-      text-decoration: underline;
-    }
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-    }
+    header{ margin-bottom: 28px; }
+    h1{ font-size: clamp(42px, 7vw, 72px); line-height:1.05; font-weight:700; margin:0 0 .25em 0; letter-spacing:-0.02em; }
+    .subhead{ color:var(--muted); font-size:20px; margin:0 0 1.25em 0; }
+    h2{ font-size: 22px; margin: 2.2em 0 .6em; }
+    p{ margin: 0 0 1em; }
+    a{ color:var(--link); text-decoration: underline; }
+    a:visited{ color: var(--link-visited); }
+    blockquote{ margin: 1.2em 0; padding-left: 1em; border-left: 3px solid #e5e7eb; color:#111; font-style: italic; }
+    hr{ border:0; border-top:1px solid #eee; margin: 2em 0; }
+    .muted{ color:var(--muted); }
+
+    /* Call-to-action button, minimal */
+    .btn{ display:inline-block; padding:10px 16px; border:1px solid #111; color:#111; background:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+    .btn:hover{ background:#111; color:#fff; }
+
+    /* Embedded Google Form */
+    .form-wrap{ width:100%; min-height: 900px; }
+    .form-wrap iframe{ width:100%; height:100%; border:0; }
+
+    /* Images (if you add any) */
+    img{ max-width:100%; height:auto; }
+
+    footer{ margin-top: 48px; font-size: 14px; color:var(--muted); }
   </style>
 </head>
 <body>
-  <h1>No en nuestro nombre</h1>
-  <p class="lead">Leé el texto completo y agregá tu firma para acompañar esta iniciativa.</p>
+  <header>
+    <h1>No en nuestro nombre</h1>
+    <p class="subhead">Leé el texto y sumá tu firma. Compartí el enlace para amplificar.</p>
+  </header>
 
-  <section>
-    <h2>Declaración</h2>
+  <section aria-labelledby="decl-title">
+    <h2 id="decl-title">Declaración</h2>
     <p>
-      <!-- Aquí va el texto de la declaración -->
+      <!-- Pegá aquí tu declaración completa o los puntos principales. Podés enlazar un PDF largo más abajo. -->
       En este espacio va la declaración. Podés pegar el texto completo o resumir los puntos principales.
-      Si preferís, podés linkear a un PDF con la versión extendida.
+    </p>
+    <p class="muted">
+      Si preferís una versión extendida, podés <a href="#" id="link-pdf">ver el PDF</a>.
     </p>
   </section>
 
-  <section>
-    <h2>Sumá tu firma</h2>
-    <!-- Reemplazá el SRC con el de tu Google Form -->
-    <iframe src="https://docs.google.com/forms/d/e/REEMPLAZAR_FORM_ID/viewform?embedded=true">Cargando…</iframe>
+  <hr/>
+
+  <section id="firmar" aria-labelledby="form-title">
+    <h2 id="form-title">Sumá tu firma</h2>
+    <p>Completá el formulario. Tus respuestas se guardan en Google Forms.</p>
+    <div class="form-wrap">
+      <!-- Reemplazá el SRC con el de tu Google Form (Enviar → </> Incrustar) -->
+      <iframe src="https://docs.google.com/forms/d/e/REEMPLAZAR_FORM_ID/viewform?embedded=true" title="Formulario de firmas">Cargando…</iframe>
+    </div>
+    <p style="margin-top:1em">
+      <a class="btn" href="#firmar">Volver a firmar</a>
+    </p>
   </section>
+
+  <footer>
+    ¿Consultas u organizaciones adherentes? Escribí a <a href="mailto:contacto@example.com">contacto@example.com</a>
+  </footer>
 </body>
 </html>
