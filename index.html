@@ -3,153 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Declaración — Sumá tu firma</title>
+  <title>No en nuestro nombre</title>
 
-  <!-- SEO / Social -->
   <meta name="description" content="Leé la declaración y sumá tu firma en apoyo." />
-  <meta property="og:title" content="Declaración — Sumá tu firma" />
-  <meta property="og:description" content="Leé la declaración y sumá tu firma en apoyo." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" id="og-url" />
-  <meta property="og:image" content="" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <style>
-    :root {
-      --bg: #0f172a;       /* slate-900 */
-      --panel: #111827;    /* gray-900 */
-      --text: #e5e7eb;     /* gray-200 */
-      --muted: #9ca3af;    /* gray-400 */
-      --brand: #10b981;    /* emerald-500 */
-      --brand-700: #047857;/* emerald-700 */
-      --accent: #22d3ee;   /* cyan-400 */
-    }
-    * { box-sizing: border-box; }
     body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1000px 600px at 20% -10%, #1f2937 0%, #0b1024 60%), var(--bg);
-      color: var(--text);
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #000000;
       line-height: 1.6;
+      max-width: 680px;
+      padding: 40px 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    header {
-      max-width: 900px; margin: 0 auto; padding: 48px 20px 16px;
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: bold;
+      margin-bottom: 0.5em;
     }
-    .badge { display:inline-block; padding:6px 10px; border:1px solid #334155; border-radius:999px; font-size:12px; color:var(--muted); }
-    h1 { font-size: clamp(28px, 5vw, 48px); margin: 14px 0 10px; line-height: 1.1; }
-    p.lead { font-size: clamp(16px, 2.4vw, 20px); color: var(--muted); margin: 0; }
-
-    main { max-width: 900px; margin: 0 auto; padding: 16px 20px 60px; }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    h2 {
+      font-size: 20px;
+      margin-top: 2em;
     }
-    .actions { display:flex; gap: 12px; flex-wrap: wrap; margin: 14px 0 4px; }
-    .btn {
-      appearance: none; border: 0; border-radius: 12px; padding: 10px 14px; font-weight: 600; cursor: pointer;
-      background: var(--brand); color:#04251e; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    p.lead {
+      font-size: 18px;
+      color: #333333;
     }
-    .btn:hover { background: var(--brand-700); color:#eafff7; }
-    .btn.secondary { background: transparent; color: var(--text); border:1px solid #334155; }
-
-    .declaracion { white-space: pre-wrap; }
-
-    /* Responsive iframe wrapper */
-    .iframe-wrap { position: relative; width: 100%; min-height: 900px; }
-    .iframe-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; border-radius: 12px; }
-
-    footer { max-width:900px; margin: 0 auto; padding: 28px 20px 80px; color: var(--muted); font-size: 14px; }
-    footer a { color: var(--accent); }
-
-    .share { display:flex; gap:10px; flex-wrap:wrap; }
-    .share a { text-decoration:none; border:1px solid #334155; border-radius:10px; padding:8px 12px; color:var(--text); }
-    .share a:hover { background:#0b1229; }
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+    iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <span class="badge">Declaración</span>
-    <h1>Tu apoyo suma: firmá la declaración</h1>
-    <p class="lead">Leé el texto completo y agregá tu firma para acompañar esta iniciativa. Compartilo con tu red para multiplicar el alcance.</p>
-    <div class="actions">
-      <a class="btn" href="#firmar">Ir a firmar</a>
-      <a class="btn secondary" id="btn-compartir" href="#compartir">Compartir</a>
-    </div>
-  </header>
+  <h1>No en nuestro nombre</h1>
+  <p class="lead">Leé el texto completo y agregá tu firma para acompañar esta iniciativa.</p>
 
-  <main>
-    <section class="card" aria-labelledby="decl-title">
-      <h2 id="decl-title">Declaración</h2>
-      <div class="declaracion" id="texto-declaracion">
-        <!-- Pegá tu declaración aquí o reemplazá este texto -->
-        En este espacio va la declaración. Podés pegar el texto completo o resumir los puntos principales.
-        Si preferís, podés linkear a un PDF con la versión extendida.
-      </div>
-      <div class="actions">
-        <!-- Reemplazá href con el link al PDF si tenés -->
-        <a class="btn secondary" href="#" id="link-pdf" aria-label="Abrir PDF de la declaración">Ver PDF</a>
-      </div>
-    </section>
+  <section>
+    <h2>Declaración</h2>
+    <p>
+      <!-- Aquí va el texto de la declaración -->
+      En este espacio va la declaración. Podés pegar el texto completo o resumir los puntos principales.
+      Si preferís, podés linkear a un PDF con la versión extendida.
+    </p>
+  </section>
 
-    <section id="firmar" style="margin-top:26px" class="card" aria-labelledby="form-title">
-      <h2 id="form-title">Sumá tu firma</h2>
-      <p class="lead">Completá el formulario. Tus datos se envían de forma segura a Google Forms.</p>
-      <div class="iframe-wrap">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVQt3yBoIE0ys2kiPUh9w3I4GCQSUfBLkn71x_TWKaZ_MX0Q/viewform?embedded=true" width="640" height="1307" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-        <iframe title="Formulario de firmas" src="https://docs.google.com/forms/d/e/REEMPLAZAR_FORM_ID/viewform?embedded=true">Cargando…</iframe>
-      </div>
-    </section>
-
-    <section id="compartir" style="margin-top:26px" class="card" aria-labelledby="share-title">
-      <h2 id="share-title">Compartir</h2>
-      <p class="lead">Ayudá a que más personas firmen.</p>
-      <div class="share">
-        <a id="share-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
-        <a id="share-x" target="_blank" rel="noopener">X / Twitter</a>
-        <a id="share-facebook" target="_blank" rel="noopener">Facebook</a>
-        <a id="share-email" target="_blank" rel="noopener">Email</a>
-        <a id="copy-link">Copiar enlace</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div>¿Tenés preguntas o querés sumar tu organización? Escribinos: <a href="mailto:contacto@example.com">contacto@example.com</a></div>
-  </footer>
-
-  <script>
-    // Completar dinámicamente las URLs de compartir con la URL actual
-    const pageUrl = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent("Sumá tu firma a esta declaración: ");
-
-    document.getElementById('og-url').setAttribute('content', window.location.href);
-
-    const wa = document.getElementById('share-whatsapp');
-    wa.href = `https://api.whatsapp.com/send?text=${text}${pageUrl}`;
-
-    const xt = document.getElementById('share-x');
-    xt.href = `https://twitter.com/intent/tweet?text=${text}&url=${pageUrl}`;
-
-    const fb = document.getElementById('share-facebook');
-    fb.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-
-    const em = document.getElementById('share-email');
-    em.href = `mailto:?subject=${encodeURIComponent('Sumá tu firma')}&body=${text}%0D%0A${pageUrl}`;
-
-    const copy = document.getElementById('copy-link');
-    copy.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(window.location.href); copy.textContent='Link copiado'; }
-      catch { copy.textContent='No se pudo copiar'; }
-      setTimeout(()=> copy.textContent='Copiar enlace', 1800);
-    });
-
-    // Ocultar botón PDF si no hay link
-    const pdf = document.getElementById('link-pdf');
-    if (!pdf.getAttribute('href') || pdf.getAttribute('href') === '#') {
-      pdf.style.display = 'none';
-    }
-  </script>
+  <section>
+    <h2>Sumá tu firma</h2>
+    <!-- Reemplazá el SRC con el de tu Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/REEMPLAZAR_FORM_ID/viewform?embedded=true">Cargando…</iframe>
+  </section>
 </body>
 </html>
